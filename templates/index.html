@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yolodex Items</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Yolodex Items</h1>
+
+
+        
+
+        <!-- Grid View -->
+        <div class="cards grid-view">
+            {% for item in items %}
+            <div class="card">
+                <h2>{{ item['name'] }}</h2>
+                <p>{{ item['description'] }}</p>
+            </div>
+            {% endfor %}
+        
+
+        <!-- Form to add new item -->
+         <div class = "card">
+            <form action="/add_item" method="POST">
+                        <label for="name">Title:</label><br>
+                        <input type="text" id="name" name="name" ><br><br>
+                        
+                        <label for="description">Content:</label><br>
+                        <textarea id="description" name="description" ></textarea><br><br>
+                        <input type="submit" value="Add Item">
+                    </form>
+
+         </div>
+       
+
+        </div>
+</body>
+</html>
+
