@@ -1,0 +1,194 @@
+.legend {
+  text-decoration: none;
+  position: absolute;
+  top: 21px;
+  left: 22px;
+  font-weight: 700;
+  color: inherit;
+  display: inline-block;
+  width: 101px;
+  height: 19px;
+}
+.frameChild {
+  position: absolute;
+  top: 55px;
+  left: 66px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  display: none;
+}
+.keyItems {
+  border: 0.5px solid var(--color-gray);
+  outline: 0;
+  background-color: var(--color-palegoldenrod);
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  height: 27px;
+  z-index: 2;
+}
+.keyItems,
+.keyItems1,
+.relevanceKey {
+  position: absolute;
+  width: 217px;
+}
+.keyItems1 {
+  border: 0.5px solid var(--color-gray);
+  outline: 0;
+  background-color: var(--color-white);
+  top: 53px;
+  left: 217px;
+  box-sizing: border-box;
+  height: 27px;
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+  z-index: 4;
+}
+.relevanceKey {
+  top: 50px;
+  left: 240px;
+  height: 53px;
+}
+.typeLabelsChild {
+  height: 27px;
+  width: 222px;
+  position: relative;
+  background-color: var(--color-lightgoldenrodyellow);
+  border: 0.5px solid var(--color-gray);
+  box-sizing: border-box;
+  display: none;
+}
+.highlyRelevantText {
+  height: 22px;
+  width: 187px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.typeLabels,
+.typeLabelsItem {
+  border: 0.5px solid var(--color-gray);
+}
+.typeLabels {
+  align-self: stretch;
+  background-color: var(--color-lightgoldenrodyellow);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-9xs) var(--padding-4xs) 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+.typeLabelsItem {
+  height: 27px;
+  width: 225px;
+  position: relative;
+  background-color: var(--color-lavender);
+  box-sizing: border-box;
+  display: none;
+}
+.tangentiallyRelevantText {
+  flex: 1;
+  position: relative;
+  z-index: 4;
+}
+.relevanceTypes,
+.typeLabels1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.typeLabels1 {
+  align-self: stretch;
+  background-color: var(--color-lavender);
+  border: 0.5px solid var(--color-gray);
+  flex-direction: row;
+  padding: var(--padding-9xs) var(--padding-11xs) var(--padding-8xs)
+    var(--padding-5xs);
+  white-space: nowrap;
+  z-index: 3;
+  margin-top: -1px;
+  color: var(--color-mediumpurple-100);
+}
+.relevanceTypes {
+  flex: 1;
+  flex-direction: column;
+  min-width: 146px;
+}
+.moderatelyRelevantText {
+  flex: 1;
+  position: relative;
+  z-index: 3;
+}
+.moderatelyRelevantTextWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 0 var(--padding-12xs);
+}
+.irrelevantText {
+  align-self: stretch;
+  position: relative;
+  color: var(--color-darkgray-200);
+  z-index: 5;
+}
+.descriptionContent {
+  align-self: stretch;
+  flex-direction: column;
+  gap: var(--gap-4xs);
+}
+.descriptionContent,
+.relevanceDescription,
+.relevanceExplanation {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.relevanceDescription {
+  width: 214px;
+  flex-direction: column;
+  padding: var(--padding-8xs) 0 0;
+  box-sizing: border-box;
+  color: var(--color-peru);
+}
+.relevanceExplanation {
+  position: absolute;
+  top: 50px;
+  left: 22px;
+  width: 443px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: var(--gap-9xs);
+  max-width: 100%;
+  font-size: var(--font-size-xs);
+  color: var(--color-forestgreen);
+  font-family: var(--font-roboto-mono);
+}
+.legendParent {
+  height: 124px;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  overflow: hidden;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-mini);
+  color: var(--color-dimgray);
+  font-family: var(--font-roboto);
+}
+@media screen and (max-width: 450px) {
+  .legendParent {
+    height: auto;
+    min-height: 124;
+  }
+}
